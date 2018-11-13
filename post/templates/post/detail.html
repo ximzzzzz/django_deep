@@ -1,0 +1,10 @@
+{% extends 'post/base.html' %}
+{% block body_block %}
+
+<a href="{% url 'post:delete' id=post.id %}">삭 제 </a>
+<a href="{% url 'post:update' id=post.id %}">수 정 </a>
+<h1>{{post.title}}</h1>
+<h2>{{post.content|safe}}</h2>  
+
+
+{% endblock %}
